@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(135deg, #2a2a2a, #121212);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 3rem;
+  margin: 0px;
+  margin-bottom: 15px;
+  font-weight: bolder;
+  color: rgb(59, 130, 246);
+  /* letter-spacing: 0.02em; */
+}
+
+
+
+
+#todo {
+    background-color: #3a3a3a;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 320px;
+    height: 350px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-todo {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-todo input {
+    border: 2px solid transparent;
+    padding: 8px;
+    font-size: medium;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.input-todo input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-todo input:focus {
+    border-color: rgba(59, 130, 246);
+}
+
+.a-todo {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #505050;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 45px;
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#parentTodos {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding-right: 5px;
+}
+
+.delBtn {
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: #ff4500;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: monospace;
+}
+
+.delBtn:hover {
+    background-color: #ff4400bd;
+}
+
+#add-todo {
+    border: none;
+    padding: 0;
+    font-size: 30px;
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(59, 130, 246);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+#add-todo:hover {
+    background-color: rgba(59, 131, 246, 0.82);
+}
+
+.no-tasks-message {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#parentTodos::-webkit-scrollbar {
+    width: 8px;
+}
+
+#parentTodos::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+#parentTodos::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.9);
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+#parentTodos::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 131, 246, 1);
+}
+.editBtn{
+    /* color: black; */
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background-color: rgb(59, 130, 246);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: monospace;
+}
+.editBtn:hover{
+    background-color: rgba(59, 131, 246, 0.82);;
+}
+.iconsDiv{
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+.task {
+    display: inline-block;      /* allows width to be set */
+    max-width: 258px;           /* restrict width */
+    word-wrap: break-word;      /* wrap long words if needed */
+    white-space: normal;        /* allows line wrapping */
+}
+
+.editInput{
+    border: 2px solid transparent;
+    border-radius:10px;
+    padding: 4px;
+    background-color: #2a2a2a;
+    /* background: linear-gradient(135deg, #2a2a2a, #121212); */
+    color: #fff;
+    outline: none;
+}
+.editInput:focus{
+        border-color: rgba(59, 130, 246);
+}
